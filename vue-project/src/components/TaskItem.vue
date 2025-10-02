@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-// Pastikan path ini benar sesuai struktur proyek Anda
+
 import { formatDate } from '../utils';
 
 defineProps({

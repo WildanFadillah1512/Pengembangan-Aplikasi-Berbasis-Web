@@ -38,7 +38,7 @@ const emit = defineEmits(['addTask']);
 const newTask = ref("");
 const taskCategory = ref("");
 const showError = ref(false);
-const taskInput = ref(null); // Untuk auto-focus
+const taskInput = ref(null); 
 
 function handleAddTask() {
   const text = newTask.value.trim();
@@ -54,22 +54,19 @@ function handleAddTask() {
   }
   
   emit('addTask', { text: newTask.value, category: taskCategory.value });
-  
-  // Reset form
+
   newTask.value = "";
   taskCategory.value = "";
   showError.value = false;
   nextTick(() => taskInput.value?.focus());
 }
 
-// Watcher untuk mode edit: jika initialData berubah, isi form
 watch(() => props.initialData, (newData) => {
   if (newData) {
     newTask.value = newData.text;
     taskCategory.value = newData.category;
     nextTick(() => taskInput.value?.focus());
   } else {
-    // Jika user selesai edit, reset formnya
     newTask.value = "";
     taskCategory.value = "";
   }

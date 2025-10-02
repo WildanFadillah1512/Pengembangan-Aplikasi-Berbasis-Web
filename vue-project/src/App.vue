@@ -102,8 +102,6 @@ const {
   countByCategory,
   selectCategory
 } = useTasks();
-
-// Fungsi ini menangani penambahan tugas baru DAN pembaruan tugas yang diedit
 function handleAddTask(taskData) {
   if (taskToEdit.value && taskToEdit.value.id) {
     updateTask(taskToEdit.value.id, taskData);
@@ -113,7 +111,6 @@ function handleAddTask(taskData) {
   taskToEdit.value = null;
 }
 
-// Fungsi ini menyiapkan form untuk mode edit
 function handleEdit(id) {
   const task = tasks.value.find((t) => t.id === id);
   if (task) {
