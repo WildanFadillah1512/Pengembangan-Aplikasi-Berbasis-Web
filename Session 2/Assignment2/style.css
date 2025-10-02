@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#add-task-btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#add-task-btn:hover {
+    background-color: #0056b3;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.task-item .task-text {
+    flex-grow: 1;
+    text-align: left;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.task-item.completed {
+    background-color: #e8f5e9; /* Light green background */
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #2e7d32; /* Darker green text */
+}
+
+.task-item .buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.task-item button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+.task-item button:hover {
+    opacity: 0.8;
+}
+
+.complete-btn {
+    background-color: #28a745; /* Green */
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red */
+}
